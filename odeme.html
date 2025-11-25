@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödeme Yap - CS2SkinMarket</title>
+    <link rel="icon" href="images/kelebek.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="main-nav" style="justify-content: center;">
+        <h2 style="color:white;">CS2SkinMarket Güvenli Ödeme</h2>
+    </nav>
+
+    <div class="payment-container">
+        <div class="payment-header">
+            <h3>Kart Bilgileri</h3>
+        </div>
+
+        <div class="total-amount-box">
+            <div class="quick-pay-section">
+    <p style="text-align:center; color:#ccc; margin-bottom:10px;">Hızlı Ödeme Yöntemleri</p>
+    
+    <div class="quick-buttons">
+        <button class="quick-btn google-pay" onclick="simulatePayment('Google Pay')">
+            <i class="fab fa-google-pay"></i>
+        </button>
+
+        <button class="quick-btn apple-pay" onclick="simulatePayment('Apple Pay')">
+            <i class="fab fa-apple-pay"></i>
+        </button>
+
+        <button class="quick-btn paypal" onclick="simulatePayment('PayPal')">
+            <i class="fab fa-paypal"></i>
+        </button>
+    </div>
+
+    <div class="separator">
+        <span>veya Kredi Kartı ile</span>
+    </div>
+</div>
+            Ödenecek Tutar: <span id="paymentTotal" style="color:#00ff96; font-weight:bold;">₺ 0.00</span>
+        </div>
+
+        <form id="paymentForm">
+            <div class="form-group">
+                <label>Kart Üzerindeki İsim</label>
+                <input type="text" placeholder="Ad Soyad" required>
+            </div>
+
+            <div class="form-group">
+                <label>Kart Numarası</label>
+                <input type="text" placeholder="0000 0000 0000 0000" maxlength="19" required>
+            </div>
+
+            <div style="display: flex; gap: 15px;">
+                <div class="form-group" style="flex:1;">
+                    <label>Son Kullanma (Ay/Yıl)</label>
+                    <input type="text" placeholder="MM/YY" maxlength="5" required>
+                </div>
+                <div class="form-group" style="flex:1;">
+                    <label>CVV</label>
+                    <input type="text" placeholder="123" maxlength="3" required>
+                </div>
+            </div>
+
+            <button type="submit" class="pay-now-btn">Ödemeyi Tamamla</button>
+        </form>
+    </div>
+
+    <script src="cardinfo.js"></script>
+
+</body>
+</html>
